@@ -7,6 +7,8 @@ Fetch real-time data from solar inverters using HTTP requests.
 - Parse JSON data received from the solar inverter API.
 - Store parsed data into a MySQL database for long-term storage and analysis.
 
+Application utilize `GetInverterRealtimeData.cgi` described in [Fronius_api-doc.pdf](Fronius_api-doc.pdf) and store information in database
+
 ## Installation
 
 
@@ -16,7 +18,13 @@ Before installing and running the Fronius Inverter Data Logger, ensure you have 
 - Go programming language (version 1.16 or later)
 - MySQL database server
 
-#### Create a .env file: Create a .env file in the project directory and configure it with the following environment variables:
+#### Prepare database
+
+Create table from [table-struct.sql](table-struct.sql)
+
+#### Create a .env file
+
+Create a `.env` file in the project directory and configure it with the following environment variables:
 
 ```
 DBUSER=user
